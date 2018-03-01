@@ -6,6 +6,8 @@ let game = {
     unanswered: "",
     start:
         function start(){
+            $(".start_screen").hide()
+            $(".hide").show()
             game.time = 5
             $("#time").text(game.time)
             game.display_time()
@@ -23,7 +25,7 @@ let game = {
                 clearInterval(intervalId)}
         },
 
-        
+
 }
 
 
@@ -36,9 +38,10 @@ let game = {
 
 
 
-
-
-
-
-game.start()
+$("#start_button").on("click", game.start)
+start_screen()
+function start_screen () {
+    ($(".hide")).hide()
+}
+///
 })

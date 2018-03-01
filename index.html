@@ -11,12 +11,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron text-center">
             <h1 class="display-4">Trivia</h1>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container start_screen">
+        <div class="text-center">
+            <button type="button" id="start_button" class="btn btn-primary btn-lg">Start</button>
+        </div>
+    </div>
+
+    <div class="container hide" >
         <div class="row">
             <div class="col-md-6"
                 <h3 class="display-1">Time Remaining:</h3>
@@ -27,7 +33,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container hide">
         <div class="row">
             <div class="col">
                 <p>Question goes here</p>
@@ -36,40 +42,27 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1">Answer 1</label>
+                        <input type="radio" id="ans1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="ans1">Answer 1</label>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">Answer 2</label>
+                        <input type="radio" id="ans2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="ans2">Answer 2</label>
                 </div>
             </div>
             <div class="col-md-3">
                     <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio3">Answer 3</label>
+                            <input type="radio" id="ans3" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="ans3">Answer 3</label>
                     </div>
             </div>
             <div class="col-md-3">
                     <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio4">Answer 4</label>
+                            <input type="radio" id="ans4" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="ans4">Answer 4</label>
                     </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <p>Generate buttons under here</p>
-        </div>
-        <div class="row">
-            <div class="col">
-                <span id="answers">
-
-                </span>
             </div>
         </div>
     </div>
