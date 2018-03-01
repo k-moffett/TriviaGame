@@ -30,25 +30,21 @@ let game = {
         },
     results:
         function results () {
-            if ($("input:checked").val() === "true"){
-                game.correct++
-                console.log(game.correct, "correct")
-            }
-            if ($("input:checked").val() === "false"){
-                game.incorrect++
-                console.log(game.incorrect, "incorrect")
-            }
-            if ($("input:checked").val() === ""){
-                game.unanswered++
-                console.log(game.unanswered, "unanswered")
-            }
+                
+                if  ($("input:checked").val() === "true"){
+                    game.correct++
+                    $("#correct_count").append(game.correct)
+                }
+                if ($("input:checked").val() === "false"){
+                    game.incorrect++
+                    $("#incorrect_count").append(game.incorrect)
+                }
+                if ($("input:checked").val() === undefined){
+                    game.unanswered++
+                    $("#unanswered_count").append(game.unanswered)
+                }
         },    
 }
-
-
-
-
-
 
 
 

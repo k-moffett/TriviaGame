@@ -25,12 +25,13 @@
     <div class="container game_over">
         <div>
             <div class="row">
-                <div class="col-md-6">
-                    <h3>Correct:</h3>
-                    <h3>Incorrect:</h3>
-                    <h3>Unanswered:</h3>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h3 id="correct_count">Correct:</h3>
+                    <h3 id="incorrect_count">Incorrect:</h3>
+                    <h3 id="unanswered_count">Unanswered:</h3>
                 </div>
-
+                <div class="col-md-4"></div>
             </div>
         </div>
     </div>
@@ -55,30 +56,64 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="custom-control custom-radio">
-                        <input type="radio" value = "false" id="ans1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="ans1">D</label>
+                        <input type="radio" value = "false" id="a1q1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="a1q1">D</label>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="custom-control custom-radio">
-                        <input type="radio" value = "false" id="ans2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="ans2">#E</label>
+                        <input type="radio" value = "false" id="a2q1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="a2q1">#E</label>
                 </div>
             </div>
             <div class="col-md-3">
                     <div class="custom-control custom-radio">
-                            <input type="radio" value = "false" id="ans3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="ans3">A</label>
+                            <input type="radio" value = "false" id="a3q1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="a3q1">A</label>
                     </div>
             </div>
             <div class="col-md-3">
                     <div class="custom-control custom-radio">
-                            <input type="radio" value = "true" id="ans4" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="ans4">G</label>
+                            <input type="radio" value = "true" id="a4q1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="a4q1">G</label>
                     </div>
             </div>
         </div>
     </div>
+
+    <div class="container game_content">
+            <div class="row">
+                <div class="col">
+                    <p>Which note below would make a G Major triad dominant?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" value = "false" id="a1q2" name="customRadio2" class="custom-control-input">
+                            <label class="custom-control-label" for="a1q2">bB</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" value = "true" id="a2q2" name="customRadio2" class="custom-control-input">
+                            <label class="custom-control-label" for="a2q2">F</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="custom-control custom-radio">
+                                <input type="radio" value = "false" id="a3q2" name="customRadio2" class="custom-control-input">
+                                <label class="custom-control-label" for="a3q2">A</label>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="custom-control custom-radio">
+                                <input type="radio" value = "false" id="a4q2" name="customRadio2" class="custom-control-input">
+                                <label class="custom-control-label" for="a4q2">C</label>
+                        </div>
+                </div>
+            </div>
+        </div>
 
 
 
