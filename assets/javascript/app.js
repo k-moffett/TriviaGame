@@ -7,7 +7,7 @@ let game = {
     start:
         function start(){
             $(".start_screen").hide()
-            $(".hide").show()
+            $(".game_content").show()
             game.time = 5
             $("#time").text(game.time)
             game.display_time()
@@ -22,7 +22,10 @@ let game = {
             game.time--
             $("#time").text(game.time)
             if (game.time === 0) {
-                clearInterval(intervalId)}
+                clearInterval(intervalId)
+                $(".game_content").hide()
+                $(".game_over").show()
+            }
         },
 
 
@@ -41,7 +44,8 @@ let game = {
 $("#start_button").on("click", game.start)
 start_screen()
 function start_screen () {
-    ($(".hide")).hide()
+    $(".game_content").hide()
+    $(".game_over").hide()
 }
 ///
 })
