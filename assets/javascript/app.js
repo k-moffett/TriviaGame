@@ -23,16 +23,27 @@ let game = {
             $("#time").text(game.time)
             if (game.time === 0) {
                 clearInterval(intervalId)
+                game.results()
                 $(".game_content").hide()
                 $(".game_over").show()
             }
         },
-
-
+    results:
+        function results () {
+            if ($("input:checked").val() === "true"){
+                game.correct++
+                console.log(game.correct, "correct")
+            }
+            if ($("input:checked").val() === "false"){
+                game.incorrect++
+                console.log(game.incorrect, "incorrect")
+            }
+            if ($("input:checked").val() === ""){
+                game.unanswered++
+                console.log(game.unanswered, "unanswered")
+            }
+        },    
 }
-
-
-
 
 
 
@@ -47,5 +58,4 @@ function start_screen () {
     $(".game_content").hide()
     $(".game_over").hide()
 }
-///
 })
