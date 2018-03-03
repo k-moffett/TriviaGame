@@ -4,7 +4,7 @@ let game = {
     correct: "",
     incorrect: "",
     unanswered: "",
-    ans_array: "",    
+    ans_array: "",
     start:
         function start(){
             $(".start_screen").hide()
@@ -32,13 +32,24 @@ let game = {
         function results () {
             array = $("input:checked")
                 game.ans_array = array
+                console.log(game.ans_array)
                 game.score()
             },
     score:
         function score() {
             for (i=0; i<game.ans_array.length; i++) {
                 let temp = this.ans_array[i]
-                console.log(this.ans_array[i])
+                console.log($(temp).val())
+                if ($(temp).val() === "true") {
+                    game.correct++
+                    $("#correct_count").text(game.correct)
+
+                }
+                if ($(temp).val() === "false") {
+                    game.incorrect++
+                    $("#incorrect_count").text(game.incorrect)
+                }
+
             }
         },    
 }
