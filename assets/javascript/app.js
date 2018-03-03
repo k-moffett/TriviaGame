@@ -16,7 +16,6 @@ let game = {
     display_time:
         function display_time() {
             intervalId = setInterval(game.countdown, 1000)
-            $("#time").text(game.time)   
     },
     countdown:
         function countdown() {
@@ -38,8 +37,8 @@ let game = {
     score:
         function score() {
             for (i=0; i<game.ans_array.length; i++) {
+                let temp = this.ans_array[i]
                 console.log(this.ans_array[i])
-
             }
         },    
 }
