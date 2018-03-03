@@ -4,6 +4,7 @@ let game = {
     correct: "",
     incorrect: "",
     unanswered: "",
+    ans_array: "",    
     start:
         function start(){
             $(".start_screen").hide()
@@ -30,24 +31,18 @@ let game = {
         },
     results:
         function results () {
-                
-                if  ($("input:checked").val() === "true"){
-                    game.correct++
-                    $("#correct_count").append(game.correct)
-                }
-                if ($("input:checked").val() === "false"){
-                    game.incorrect++
-                    $("#incorrect_count").append(game.incorrect)
-                }
-                if ($("input:checked").val() === undefined){
-                    game.unanswered++
-                    $("#unanswered_count").append(game.unanswered)
-                }
+            array = $("input:checked")
+                game.ans_array = array
+                game.score()
+            },
+    score:
+        function score() {
+            for (i=0; i<game.ans_array.length; i++) {
+                console.log(this.ans_array[i])
+
+            }
         },    
 }
-
-
-
 $("#start_button").on("click", game.start)
 start_screen()
 function start_screen () {
